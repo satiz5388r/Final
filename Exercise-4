@@ -1,0 +1,23 @@
+
+Exercise 4: Windows problem solving (optional)
+
+A short description of your troubleshooting process.
+
++ First of all I see the website Error, and then only I will fix the Issues.
+
+
+Tell us what's wrong.
+
+Deployment Code Upload in website hosted means these kinds of errors are possible. Previously deployment code cache means this error is possible. Some time server down is there a possible case of this kind of error.
+
+Step 1: goto iis (internet information system)
+
+Step 2: Desktop-48ASJU9(Destop)
+
+Step3 : sites
+   + Default website
+   +MyAPP---rightClick ---Managed website----Advanced Setting ------Application Pool
+ Again select + Application pools----MyApp—RightClick ----start 
+
+After that goto webbrowser -------Refresh Symbol our web browser
+
