@@ -1,1 +1,37 @@
+#!bin/bash
+java -version
+sudo apt update
+sudo apt install openjdk-8-jdk
+java -version
+sudo apt install apt-transport-https
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+sudo apt install elasticsearch
+sudo systemctl daemon-reload
+sudo systemctl enable elasticsearch.service
+sudo systemctl start elasticsearch.service
+sudo systemctl restart elasticsearch.service
+vim /etc/elasticsearch/elasticsearch.yml
+curl localhost:9200
+curl http://localhost:9200/_aliases
+sudo service elasticsearch status
+#sudo ufw allow 22
+#sudo ufw allow from external_IP to any port 9200
+#sudo ufw enable
+#sudo ufw status
 
+
+
+
+
+
+#sudo yum install java-1.8.0-openjdk.x86_64
+#java -version
+#sudo rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+#sudo vi /etc/yum.repos.d/elasticsearch.repo
+#sudo yum install elasticsearch
+#sudo vi /etc/elasticsearch/elasticsearch.yml
+#sudo vi /etc/elasticsearch/jvm.options
+#sudo service elasticsearch start
+#sudo service elasticsearch restart
+#sudo systemctl enable elasticsearch
